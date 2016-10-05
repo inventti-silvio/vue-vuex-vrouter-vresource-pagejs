@@ -1,5 +1,11 @@
-export const increment = ctx => ctx.commit('increment');
-export const decrement = ctx => ctx.commit('decrement');
+export const increment = ctx => {
+  ctx.commit('increment');
+  ctx.commit('saveHistory', 'increment');
+};
+export const decrement = ctx => {
+  ctx.commit('decrement');
+  ctx.commit('saveHistory', 'decrement');
+};
 
 //Object destructuring
 export const incrementAsync = ({commit}) => setTimeout(() => commit('increment'), 1000);
@@ -17,5 +23,20 @@ export const incrementEven = ctx => {
 export const incrementOdd = ({commit, state}) => {
   if(state.count % 2 !== 0) {
       commit('increment');
+  }
+};
+
+export const revert = ({commit, state}) => {
+  let lastCommit = state.history.pop();
+  switch (lastCommit) {
+
+    case 'increment':
+      commit('decrement');
+      break;
+
+    case 'decrement':
+      commit('increment');
+      break;
+
   }
 };

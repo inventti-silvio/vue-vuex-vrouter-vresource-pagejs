@@ -34,10 +34,10 @@ export default {
   attached() {},
   methods: {
     increment () {
-     store.commit('increment')
+     store.dispatch('increment')
     },
     decrement () {
-    	store.commit('decrement')
+    	store.dispatch('decrement')
     },
     alert () {
     	store.dispatch('alert');
@@ -55,7 +55,7 @@ export default {
       store.dispatch('incrementEven');
     },
     revert () {
-      store.commit('revert');
+      store.dispatch('revert');
     }
   },
   components: {}
