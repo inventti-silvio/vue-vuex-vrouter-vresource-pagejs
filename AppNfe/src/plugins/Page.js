@@ -3,7 +3,7 @@ let renderizador = (Componente) => {
   return () => {
     new Vue({
       replace: false,
-      el: '#app',
+      el: '#body',
       render: h => h(Componente)
     });
   };

@@ -23,6 +23,8 @@
       <a href="/AppNfe/a">Page A</a>
       |
       <a href="/AppNfe/b">Page B</a>
+      |
+      <a href="/AppNfe/store">Page B</a>
     </p>
   </div>
 </template>

@@ -4,7 +4,7 @@ import App from './App';
 import A from './components/pages/PaginaA';
 import B from './components/pages/PaginaB';
 
-Vue.use(Vuex);
+import StorePage from './components/pages/StorePage';
 
 let renderer = (Component) => {
   return () => {
@@ -16,18 +16,9 @@ let renderer = (Component) => {
   };
 };
 
-const Counter = {
-  template: `<div>{{ count }}</div>`,
-  computed: {
-    count () {
-      return store.state.count;
-    }
-  }
-};
-
-console.log('teste');
 //page.base('/AppNfe');
 page('/AppNfe', renderer(App));
 page('/AppNfe/a', renderer(A));
 page('/AppNfe/b', renderer(B));
+page('/AppNfe/store', renderer(StorePage));
 page.start();
