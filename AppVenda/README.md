@@ -1,10 +1,6 @@
-# app-nfe
+# app-venda
 
 > A Vue.js project
-
-## Fake server
-
-> to run fake server please install `npm install -g json-server`
 
 ## Build Setup
 
@@ -26,9 +22,6 @@ npm run e2e
 
 # run all tests
 npm test
-
-# run fake server
-npm run fake
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -13,11 +13,10 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.vue', '.ts'],
+    extensions: ['', '.js', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
       'vue': 'vue/dist/vue.common.js',
-      'domain': path.resolve(__dirname, '../src/domain'),
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components')
@@ -28,13 +27,6 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.ts$/,
-        //loader: 'babel-loader?presets[]=es2015!ts-loader',
-        //loader: 'ts-loader',
-        loader: 'awesome-typescript-loader',
-        exclude: /node_modules/
-      },
       {
         test: /\.vue$/,
         loader: 'vue'

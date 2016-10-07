@@ -1,0 +1,113 @@
+{
+  "empresas": [
+    {
+      "id": 1,
+      "cnpj": "0000000001",
+      "fantasia": "Magali Alimentos",
+      "regime": 1
+    },
+    {
+      "id": 2,
+      "cnpj": "0000000002",
+      "fantasia": "Cascão Perfumaria",
+      "regime": 2
+    },
+    {
+      "id": 3,
+      "cnpj": "0000000003",
+      "fantasia": "Cebolina Clinica de Fonoaudiologia",
+      "regime": 2
+    }
+  ],
+  "regimes": [
+    {
+      "id": 1,
+      "descricao": "Normal"
+    },
+    {
+      "id": 2,
+      "descricao": "Simples"
+    }
+  ],
+  "transacoes": [
+    {
+      "id": 1,
+      "nome": "Venda de produto",
+      "sigla": "5101/6101",
+      "cfop": "101",
+      "icms": "101",
+      "ipi": false,
+      "piscofins": false,
+      "revisada": false
+    },
+    {
+      "id": 2,
+      "nome": "Venda de mercadoria",
+      "sigla": "5101/6102",
+      "cfop": "102",
+      "icms": "101",
+      "ipi": false,
+      "piscofins": false,
+      "revisada": false
+    }
+  ],
+  "observacoes": [
+    {
+      "id": 1,
+      "descricao": "direito a crédito"
+    }
+  ],
+  "vendedores": [
+    {
+      "id": 1,
+      "nome": "Joelma"
+    },
+    {
+      "id": 2,
+      "nome": "Ximbinha"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Banana",
+      "valorUnitario": 1.25
+    },
+    {
+      "id": 2,
+      "nome": "Manga",
+      "valorUnitario": 2
+    },
+    {
+      "id": 3,
+      "nome": "Abacate",
+      "valorUnitario": 3.33
+    }
+  ],
+  "detalhes": [
+    {
+      "id": 1,
+      "icms": 0.15,
+      "ipi": 0,
+      "piscofins": 0
+    },
+    {
+      "id": 2,
+      "icms": 0,
+      "ipi": 0.1,
+      "piscofins": 0.1
+    },
+    {
+      "id": 3,
+      "icms": 0.15,
+      "ipi": 0.1,
+      "piscofins": 0.3
+    },
+    {
+      "icms": 0.15,
+      "ipi": 0.1,
+      "piscofins": 0.5,
+      "id": 4
+    }
+  ]
+}
