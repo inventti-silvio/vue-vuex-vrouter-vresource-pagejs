@@ -20,6 +20,10 @@ module.exports = merge(baseWebpackConfig, {
     page: 'page'
   },
   plugins: [
+    new webpack.ProvidePlugin ({
+      page: 'page',
+      'window.page':'page'
+    }),
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
@@ -32,10 +36,6 @@ module.exports = merge(baseWebpackConfig, {
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    }),
-    new webpack.ProvidePlugin({
-      page:'page',
-      'window.page':'page'
-   }),
- ]
-});
+    })
+  ]
+})

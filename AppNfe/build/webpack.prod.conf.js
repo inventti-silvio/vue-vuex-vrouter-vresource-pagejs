@@ -14,16 +14,11 @@ var webpackConfig = merge(baseWebpackConfig, {
   module: {
     loaders: utils.styleLoaders({ sourceMap: config.build.productionSourceMap, extract: true })
   },
-  externals: {
-    page: 'page'
-  },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
-    //filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    //chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
-    filename: utils.assetsPath('js/[name].js'),
-    chunkFilename: utils.assetsPath('js/[id].js')
+    filename: utils.assetsPath('js/[name].[chunkhash].js'),
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   vue: {
     loaders: utils.cssLoaders({
@@ -33,10 +28,6 @@ var webpackConfig = merge(baseWebpackConfig, {
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/workflow/production.html
-    new webpack.ProvidePlugin({
-       page:'page',
-       "window.page":'page'
-    }),
     new webpack.DefinePlugin({
       'process.env': env
     }),
@@ -87,12 +78,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       name: 'manifest',
       chunks: ['vendor']
     })
-  ],
-  resolve: {
-    alias: {
-      page: 'page'
-    }
-  }
+  ]
 })
 
 if (config.build.productionGzip) {

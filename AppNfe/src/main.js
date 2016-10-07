@@ -1,24 +1,10 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import App from './App';
-import A from './components/pages/PaginaA';
-import B from './components/pages/PaginaB';
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
 
-import StorePage from './components/pages/StorePage';
-
-let renderer = (Component) => {
-  return () => {
-    new Vue({
-      replace: false,
-      el: '#body',
-      render: h => h(Component)
-    });
-  };
-};
-
-//page.base('/AppNfe');
-page('/AppNfe', renderer(App));
-page('/AppNfe/a', renderer(A));
-page('/AppNfe/b', renderer(B));
-page('/AppNfe/store', renderer(StorePage));
-page.start();
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  render: h => h(App)
+})

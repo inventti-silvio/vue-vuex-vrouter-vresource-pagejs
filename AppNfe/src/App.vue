@@ -1,5 +1,5 @@
 <template>
-  <div id="body">
+  <div id="app">
     <img class="logo" src="./assets/logo.png">
     <hello></hello>
     <p>
@@ -18,13 +18,6 @@
       You may also want to checkout
       <a href="https://github.com/vuejs/vue-router/" target="_blank">vue-router</a> for routing and
       <a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
-    </p>
-    <p>
-      <a href="/AppNfe/a">Page A</a>
-      |
-      <a href="/AppNfe/b">Page B</a>
-      |
-      <a href="/AppNfe/store">Page B</a>
     </p>
   </div>
 </template>
